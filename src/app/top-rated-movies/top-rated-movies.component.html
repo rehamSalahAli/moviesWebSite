@@ -1,0 +1,33 @@
+
+  <section class="main-movie ">
+    <div class="container container-fluid my-5 ">
+  
+      <div class="row ">
+  
+  
+        <div *ngFor="let movie of topRated" class="col-md-3 my-2 ">
+  
+          <div class="movie position-relative ">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+            <div class="vote ">{{movie.vote_average}}</div>
+            <div class="layer d-flex align-items-center flex-column">
+              <h2 class="  my-3"> {{movie.title == undefined ? movie.name:movie.title}}</h2>
+  
+              <h4 class="original-title"> {{movie.original_title}}</h4>
+                  <p class="overview">{{movie.overview}}</p>
+  
+                  <p class="mDate">{{movie.release_date}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="page-num w-25 m-auto d-flex  justify-content-center  ">
+      <i class="fa  fa-arrow-circle-left my-1 " (click)="previousPage()"></i>
+      <div class=" numbers mx-2 " *ngFor='let pageNumber of pageNumbers' (click)="getMovies(pageNumber)">
+        {{pageNumber}}
+      </div>
+      <i class="fa fa-arrow-circle-right my-1 " (click)="nextPage()"></i>
+    </div>
+  </section>

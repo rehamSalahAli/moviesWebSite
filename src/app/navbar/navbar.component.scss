@@ -1,0 +1,14 @@
+.navbar-toggler{
+    color: #fec400 !important;
+    font-size: 1.5rem;
+border: 2px solid white;
+}
+.navbar-toggler:hover{
+color: #24baef !important;
+
+}
+@media (max-width: 768px){
+    .video-img{
+        display: none;
+    }
+}
