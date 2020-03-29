@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tabibk",
+            "outputPath": "dist/movies",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -124,15 +124,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tabibk:serve"
+            "devServerTarget": "movies:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tabibk:serve:production"
+              "devServerTarget": "movies:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "tabibk"
+  "defaultProject": "movies"
 }
